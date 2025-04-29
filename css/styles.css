@@ -122,7 +122,7 @@ body{
     border-radius: 10px;
 }
 
-.destacados{
+.productos-destacados{
     text-align: center;
     padding: 60px 20px;
 }
@@ -134,7 +134,7 @@ body{
     flex-wrap: wrap;
 }
 
-.producto{
+.juegos-destacados{
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     padding: 20px;
@@ -142,7 +142,7 @@ body{
     transition: transform 0.3s ease;
 }
 
-.producto img{
+.juegos-destacados img{
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -161,6 +161,7 @@ body{
 
 /* Estilo para el botón CTA */
 .cta-boton {
+    display: inline-block;
     background-color: var(--color-boton);
     color: var(--color-texto);
     border: none;
@@ -169,6 +170,7 @@ body{
     border-radius: 25px; /*Borde redondo*/
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
 }
 
 /* Hover para el botón */
@@ -207,4 +209,64 @@ footer .social-links {
 
 footer p {
     margin: 5px 0;
+}
+
+/* Estilo para la sección del detalle de productos */
+.producto-detalle {
+    background-color: var(--color-fondo-superior);
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--color-texto);
+}
+
+/* Título principal de la sección */
+.producto-detalle h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de productos */
+.producto-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Asegura que los productos se acomoden si no caben en una fila */
+    gap: 20px;
+}
+
+/* Estilo para cada producto */
+.producto {
+    background-color: #b79def; /* Fondo blanco para los productos */
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que no se vean bordes feos */
+    width: 300px; /* Tamaño estándar para los productos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
+    padding: 15px;
+    transition: transform 0.3s ease; /* Transición suave para hover */
+}
+
+/* Hover para agrandar el producto */
+.producto:hover {
+    transform: translateY(-5px); /* Da la sensación de que el producto sube al pasar el ratón */
+}
+
+/* Imagen del producto */
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 15px;
+}
+
+/* Título del producto */
+.producto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Descripción del producto */
+.producto p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
 }

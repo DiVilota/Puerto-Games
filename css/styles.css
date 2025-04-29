@@ -1,0 +1,65 @@
+/*Aplicando variables de colores para todo el documento*/
+:root{
+    --color-header: #170E30;
+    --color-boton: #8960F6;
+    --color-fondo-superior: #1c073b;
+    --color-fondo-inferior: #2f0a58;
+    --color-texto: #FFFFFF;
+}
+
+/*Clase con Titulo y logo*/
+.logoTitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Ajustando el titulo a la izquierda*/
+.logoTitulo h1{
+    position: absolute;
+    left: 0;
+    margin-left: 20px; /*Margen para que no tope en el borde*/
+}
+
+
+/*Logo*/
+.logoTitulo img{
+    width: 100px;
+    height: auto;
+}
+/*Aplicando formato a Header*/
+header{
+    background-color: var(--color-header);
+    padding: 20px;
+}
+
+/*Aplicando formato a Nav*/
+nav ul{
+    display:flex;
+    justify-content: space-around;
+}
+
+/*Aplicando color a Nav*/
+nav a{
+    color: #fff;
+    text-decoration: none; /*Quitamos el subrayado feo*/
+    transition: color 0.5s ease; /*Agregamos una transicion para que quede Smooth*/
+}
+
+/*Aplicando Pseudoclase para enchular el nav*/
+nav a:hover{
+    color: goldenrod; /*Color doradito al pasar el cursor*/
+}
+
+
+/*Aplicando color al Body*/
+body{
+    background: linear-gradient(to bottom, var(--color-fondo-superior), var(--color-fondo-inferior));
+    color: var(--color-texto); /*Degradado al cuerpo del documento*/
+    font-family: 'Pixelify Sans', sans-serif; /*Aplicando Fuente Pixeleada a todo el cuerpo del documento*/
+}
+
+.hero img{
+    width: 1200px;
+    height: auto;
+}

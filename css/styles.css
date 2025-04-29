@@ -44,6 +44,9 @@ nav a{
     color: #fff;
     text-decoration: none; /*Quitamos el subrayado feo*/
     transition: color 0.5s ease; /*Agregamos una transicion para que quede Smooth*/
+    padding: 5px;
+    border-radius: 20px;
+    background-color:var(--color-boton) ;
 }
 
 /*Aplicando Pseudoclase para enchular el nav*/
@@ -70,29 +73,29 @@ body{
 }
 .hero-content {
     position: relative;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.6); /* Sigue aplicando fondo al texto */
+    z-index: 2; /*Sobreponiendo el texto*/
+    background-color: rgba(0, 0, 0, 0.6); /* Oscureciendo un poquito el cuadro */
     padding: 30px;
     border-radius: 15px;
     display: inline-block;
 }
-
+/*Enchulando el titulo del Hero*/
 .hero h2,
 .hero p {
     color: var(--color-texto);
 }
-
+/*Agregamos una capa oscura para la estetica del Hero*/
 .hero::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /*Ocupar todo el espacio del contenido del Hero*/
     background-color: rgba(0, 0, 0, 0.5); /*Oscurece la imagen*/
     z-index: 1;
 }
-
+/**/
 .categorias{
     text-align: center;
     padding: 60px 20px;
@@ -269,4 +272,54 @@ footer p {
     font-size: 1rem;
     line-height: 1.5;
     color: #555;
+}
+/*Base del Formulario*/
+.formulario-contacto {
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: #b79def;
+    text-align: center;
+}
+/*Contenedor del Formulario*/
+.formulario-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgb(175, 113, 207);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(106, 67, 123, 0.2);
+}
+
+/*Dando Formato a los campos del Formulario*/
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+/*Dando Formato al boton*/
+form button {
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/*Anadiendo Pseudoclases al boton*/
+form button:hover {
+    background-color: #45208b;
 }
